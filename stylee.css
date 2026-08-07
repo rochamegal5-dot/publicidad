@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* Fondo oscuro ideal para TV */
+  color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de progreso de rotación */
+.progress-bar {
+  height: 6px;
+  background-color: #3b82f6;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.tv-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100%;
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-title {
+  font-size: 3rem;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.source-tag {
+  font-size: 1.4rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+}
+
+/* Tabla Gigante para TV */
+.tv-table {
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 2.2rem;
+}
+
+.tv-table th {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 1rem;
+  border-bottom: 4px solid #3b82f6;
+}
+
+.tv-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #334155;
+}
+
+.tv-table .val {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+/* Publicidad */
+.promo-slide {
+  background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+}
+
+.badge {
+  background-color: #f59e0b;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 8px 24px;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.promo-title {
+  font-size: 4.5rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.promo-desc {
+  font-size: 2.2rem;
+  max-width: 80%;
+  color: #e2e8f0;
+}
+
+.footer-tag {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  color: #a855f7;
+}
+
+/* Layout 5 de oro */
+.flex-row {
+  display: flex;
+  gap: 2rem;
+  width: 90%;
+}
+
+.tv-box {
+  flex: 1;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #334155;
+}
+
+.tv-box h3 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+}
+
+.tv-box.highlight {
+  background-color: #064e3b;
+  border: 2px solid #10b981;
+}
+
+.pozo-big {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #a7f3d0;
+}
+
+.pozo-big strong {
+  color: #facc15;
+}
+
+.balls-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.ball {
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball.gold {
+  background-color: #eab308;
+  color: #000;
+}
+
+.extra-ball {
+  font-size: 1.6rem;
+  color: #cbd5e1;
+}
+
+/* Quiniela */
+.quiniela-grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.q-item {
+  background-color: #1e293b;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 2.2rem;
+  border-bottom: 4px solid #3b82f6;
+}
+
+.q-item span {
+  display: block;
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+
+/* Tómbola */
+.tombola-tv-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
