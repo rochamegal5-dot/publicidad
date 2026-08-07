@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalla Informativa TV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Barra de progreso superior -->
+  <div class="progress-bar" id="progress"></div>
+
+  <main class="tv-container">
+    <div class="carousel-track" id="track">
+
+      <!-- Slide 1: Publicidad -->
+      <section class="slide promo-slide">
+        <span class="badge">PROMOCIÓN ESPECIAL</span>
+        <h1 class="promo-title">DESCUENTO DEL 30%</h1>
+        <p class="promo-desc">En todas tus compras abonando con medios de pago digitales.</p>
+        <div class="footer-tag">Consultá condiciones en caja</div>
+      </section>
+
+      <!-- Slide 2: Cotización de Monedas -->
+      <section class="slide">
+        <h2 class="slide-title">COTIZACIÓN DE MONEDAS</h2>
+        <p class="source-tag">Fuente Oficial BROU</p>
+        
+        <table class="tv-table">
+          <thead>
+            <tr>
+              <th>MONEDA</th>
+              <th>COMPRA</th>
+              <th>VENTA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DÓLAR (USD)</td>
+              <td class="val">$ 39,20</td>
+              <td class="val">$ 41,60</td>
+            </tr>
+            <tr>
+              <td>EURO (EUR)</td>
+              <td class="val">$ 42,10</td>
+              <td class="val">$ 46,90</td>
+            </tr>
+            <tr>
+              <td>REAL (BRL)</td>
+              <td class="val">$ 6,80</td>
+              <td class="val">$ 8,70</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 3: 5 de Oro y Pozos -->
+      <section class="slide">
+        <h2 class="slide-title">5 DE ORO & POZOS FUTUROS</h2>
+        <p class="source-tag">La Banca Oficial</p>
+
+        <div class="flex-row">
+          <div class="tv-box">
+            <h3>ÚLTIMO SORTEO</h3>
+            <div class="balls-row">
+              <span class="ball gold">04</span>
+              <span class="ball gold">27</span>
+              <span class="ball gold">31</span>
+              <span class="ball gold">32</span>
+              <span class="ball gold">38</span>
+            </div>
+            <p class="extra-ball">Extra: <strong>24</strong> | Revancha: <strong>12-15-19-34-44</strong></p>
+          </div>
+
+          <div class="tv-box highlight">
+            <h3>POZOS ESTIMADOS</h3>
+            <div class="pozo-big">
+              <span>POZO DE ORO:</span>
+              <strong>$ 14.800.000</strong>
+            </div>
+            <div class="pozo-big">
+              <span>REVANCHA:</span>
+              <strong>$ 9.800.000</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Quiniela -->
+      <section class="slide">
+        <h2 class="slide-title">QUINIELA - SORTEO NOCTURNO</h2>
+        <p class="source-tag">Dirección Nacional de Loterías y Quinielas</p>
+
+        <div class="quiniela-grid">
+          <div class="q-item"><span>1°</span> <strong>978</strong></div>
+          <div class="q-item"><span>2°</span> <strong>235</strong></div>
+          <div class="q-item"><span>3°</span> <strong>747</strong></div>
+          <div class="q-item"><span>4°</span> <strong>127</strong></div>
+          <div class="q-item"><span>5°</span> <strong>411</strong></div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Tómbola -->
+      <section class="slide">
+        <h2 class="slide-title">TÓMBOLA - SORTEO NOCTURNO</h2>
+        <p class="source-tag">La Banca Oficial</p>
+
+        <div class="tombola-tv-grid">
+          <span class="ball">11</span><span class="ball">13</span>
+          <span class="ball">15</span><span class="ball">20</span>
+          <span class="ball">27</span><span class="ball">32</span>
+          <span class="ball">44</span><span class="ball">54</span>
+          <span class="ball">66</span><span class="ball">78</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
