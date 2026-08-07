@@ -3,84 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pantalla Informativa TV</title>
+  <title>Casino Info Showcase</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Barra de progreso superior -->
-  <div class="progress-bar" id="progress"></div>
+  <!-- Borde de Luces Estilo Casino -->
+  <div class="marquee-lights"></div>
 
-  <main class="tv-container">
+  <header class="casino-header">
+    <div class="logo">
+      <span class="suit">♦</span> GRAND CASINO <span class="suit">♠</span>
+    </div>
+    <div id="live-clock" class="casino-clock">00:00:00</div>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="carousel-nav">
+    <button class="nav-btn active" onclick="goToSlide(0)">PROMO EXCLUSIVA</button>
+    <button class="nav-btn" onclick="goToSlide(1)">COTIZACIONES</button>
+    <button class="nav-btn" onclick="goToSlide(2)">5 DE ORO</button>
+    <button class="nav-btn" onclick="goToSlide(3)">QUINIELA</button>
+    <button class="nav-btn" onclick="goToSlide(4)">TÓMBOLA</button>
+  </nav>
+
+  <!-- Contenedor del Carrusel Casino -->
+  <main class="carousel-container">
     <div class="carousel-track" id="track">
 
-      <!-- Slide 1: Publicidad -->
-      <section class="slide promo-slide">
-        <span class="badge">PROMOCIÓN ESPECIAL</span>
-        <h1 class="promo-title">DESCUENTO DEL 30%</h1>
-        <p class="promo-desc">En todas tus compras abonando con medios de pago digitales.</p>
-        <div class="footer-tag">Consultá condiciones en caja</div>
+      <!-- Slide 1: Publicidad VIP -->
+      <section class="slide">
+        <div class="casino-card promo-card">
+          <div class="card-badge">CLUB VIP</div>
+          <h2>¡OFERTA EXCLUSIVA!</h2>
+          <p class="promo-text">
+            Aprovechá hasta un <strong>30% DE DESCUENTO</strong> en tus consumiciones abonando con medios de pago digitales.
+          </p>
+          <div class="gold-chips">🎰 ♠ ♥ ♣ ♦ 🎰</div>
+        </div>
       </section>
 
-      <!-- Slide 2: Cotización de Monedas -->
+      <!-- Slide 2: Cotizaciones -->
       <section class="slide">
-        <h2 class="slide-title">COTIZACIÓN DE MONEDAS</h2>
-        <p class="source-tag">Fuente Oficial BROU</p>
-        
-        <table class="tv-table">
-          <thead>
-            <tr>
-              <th>MONEDA</th>
-              <th>COMPRA</th>
-              <th>VENTA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>DÓLAR (USD)</td>
-              <td class="val">$ 39,20</td>
-              <td class="val">$ 41,60</td>
-            </tr>
-            <tr>
-              <td>EURO (EUR)</td>
-              <td class="val">$ 42,10</td>
-              <td class="val">$ 46,90</td>
-            </tr>
-            <tr>
-              <td>REAL (BRL)</td>
-              <td class="val">$ 6,80</td>
-              <td class="val">$ 8,70</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="casino-card">
+          <h2>COTIZACIÓN DE MONEDAS</h2>
+          <p class="source-tag">MERCADO OFICIAL BROU</p>
+          <div class="data-grid">
+            <div class="grid-row header-row">
+              <span>MONEDA</span>
+              <span>COMPRA</span>
+              <span>VENTA</span>
+            </div>
+            <div class="grid-row">
+              <span>USD - Dólar</span>
+              <span class="val">$ 39,20</span>
+              <span class="val">$ 41,60</span>
+            </div>
+            <div class="grid-row">
+              <span>EUR - Euro</span>
+              <span class="val">$ 42,10</span>
+              <span class="val">$ 46,90</span>
+            </div>
+            <div class="grid-row">
+              <span>BRL - Real</span>
+              <span class="val">$ 6,80</span>
+              <span class="val">$ 8,70</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Slide 3: 5 de Oro y Pozos -->
       <section class="slide">
-        <h2 class="slide-title">5 DE ORO & POZOS FUTUROS</h2>
-        <p class="source-tag">La Banca Oficial</p>
-
-        <div class="flex-row">
-          <div class="tv-box">
+        <div class="casino-card">
+          <h2>5 DE ORO & POZOS</h2>
+          <p class="source-tag">RESULTADOS LA BANCA</p>
+          
+          <div class="sub-section">
             <h3>ÚLTIMO SORTEO</h3>
-            <div class="balls-row">
-              <span class="ball gold">04</span>
-              <span class="ball gold">27</span>
-              <span class="ball gold">31</span>
-              <span class="ball gold">32</span>
-              <span class="ball gold">38</span>
+            <div class="ball-group">
+              <span class="casino-ball gold">04</span>
+              <span class="casino-ball gold">27</span>
+              <span class="casino-ball gold">31</span>
+              <span class="casino-ball gold">32</span>
+              <span class="casino-ball gold">38</span>
+              <span class="casino-ball extra">24</span>
             </div>
-            <p class="extra-ball">Extra: <strong>24</strong> | Revancha: <strong>12-15-19-34-44</strong></p>
           </div>
 
-          <div class="tv-box highlight">
-            <h3>POZOS ESTIMADOS</h3>
-            <div class="pozo-big">
-              <span>POZO DE ORO:</span>
+          <div class="pozo-container">
+            <div class="pozo-box">
+              <span>POZO DE ORO</span>
               <strong>$ 14.800.000</strong>
             </div>
-            <div class="pozo-big">
-              <span>REVANCHA:</span>
+            <div class="pozo-box">
+              <span>POZO REVANCHA</span>
               <strong>$ 9.800.000</strong>
             </div>
           </div>
@@ -89,29 +106,36 @@
 
       <!-- Slide 4: Quiniela -->
       <section class="slide">
-        <h2 class="slide-title">QUINIELA - SORTEO NOCTURNO</h2>
-        <p class="source-tag">Dirección Nacional de Loterías y Quinielas</p>
-
-        <div class="quiniela-grid">
-          <div class="q-item"><span>1°</span> <strong>978</strong></div>
-          <div class="q-item"><span>2°</span> <strong>235</strong></div>
-          <div class="q-item"><span>3°</span> <strong>747</strong></div>
-          <div class="q-item"><span>4°</span> <strong>127</strong></div>
-          <div class="q-item"><span>5°</span> <strong>411</strong></div>
+        <div class="casino-card">
+          <h2>QUINIELA NOCTURNA</h2>
+          <p class="source-tag">LOTERÍAS Y QUINIELAS</p>
+          <div class="quiniela-grid">
+            <div class="q-item"><span class="q-pos">1°</span> <span class="q-num">978</span></div>
+            <div class="q-item"><span class="q-pos">2°</span> <span class="q-num">235</span></div>
+            <div class="q-item"><span class="q-pos">3°</span> <span class="q-num">747</span></div>
+            <div class="q-item"><span class="q-pos">4°</span> <span class="q-num">127</span></div>
+            <div class="q-item"><span class="q-pos">5°</span> <span class="q-num">411</span></div>
+          </div>
         </div>
       </section>
 
       <!-- Slide 5: Tómbola -->
       <section class="slide">
-        <h2 class="slide-title">TÓMBOLA - SORTEO NOCTURNO</h2>
-        <p class="source-tag">La Banca Oficial</p>
-
-        <div class="tombola-tv-grid">
-          <span class="ball">11</span><span class="ball">13</span>
-          <span class="ball">15</span><span class="ball">20</span>
-          <span class="ball">27</span><span class="ball">32</span>
-          <span class="ball">44</span><span class="ball">54</span>
-          <span class="ball">66</span><span class="ball">78</span>
+        <div class="casino-card">
+          <h2>TÓMBOLA NOCTURNA</h2>
+          <p class="source-tag">RESULTADOS OFICIALES</p>
+          <div class="tombola-grid">
+            <span class="casino-ball">11</span>
+            <span class="casino-ball">13</span>
+            <span class="casino-ball">15</span>
+            <span class="casino-ball">20</span>
+            <span class="casino-ball">27</span>
+            <span class="casino-ball">32</span>
+            <span class="casino-ball">44</span>
+            <span class="casino-ball">54</span>
+            <span class="casino-ball">66</span>
+            <span class="casino-ball">78</span>
+          </div>
         </div>
       </section>
 
